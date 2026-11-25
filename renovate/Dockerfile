@@ -7,7 +7,7 @@ ARG BUILD_FROM=ghcr.io/seb5594/home-assistant-base:3.24-2026.11.0
 # this line, the app version and the changelog by itself. The package is installed from npm below, because the
 # official image is built for glibc and this base image uses musl.
 # renovate: datasource=docker depName=ghcr.io/renovatebot/renovate
-ARG RENOVATE_VERSION=44.260.3
+ARG RENOVATE_VERSION=44.263.0
 
 FROM ${BUILD_FROM} AS engine
 
@@ -51,7 +51,7 @@ RUN find /etc/s6-overlay/s6-rc.d -type f \( -name run -o -name finish \) -exec c
 
 ENV NODE_ENV=production
 
-ARG BUILD_VERSION=2026.11.24
+ARG BUILD_VERSION=2026.11.25
 RUN mkdir -p /etc/renovate-app && echo "${BUILD_VERSION}" >/etc/renovate-app/version
 LABEL io.hass.version="${BUILD_VERSION}" \
     io.hass.type="addon" \
