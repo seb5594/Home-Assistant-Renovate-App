@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026.11.26
+
+* 📦 Update renovatebot/renovate to 44.263.6 (was 44.263.0).
+
 ## 2026.11.25
 
 * 📦 Update renovatebot/renovate to 44.263.0 (was 44.260.3).
